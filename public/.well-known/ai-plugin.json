@@ -7,11 +7,11 @@
   },
   "servers": [
     {
-      "url": "https://twenty-moose-fry.loca.lt"
+      "url": "https://bitte-agent.vercel.app"
     }
   ],
   "x-mb": {
-    "account-id": "growthmate.near",
+    "account-id": "kahless_deckard.near",
     "assistant": {
       "name": "GrowthMate Assistant",
       "description": "Assistant for using the GrowthMate recommendation system to discover relevant activities, news and offers around the ecosystem.",
@@ -20,5 +20,42 @@
     }
   },
   "paths": {
+    "/api/feed": {
+      "get": {
+        "description": "Get a list of recommendations for the user.",
+        "operationId": "getFeed",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Discovery Feed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "post_id": {
+                        "type": "number"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "media_url": {
+                        "type": "string"
+                      },
+                      "link": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["post_id", "created_at", "media_url", "link"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

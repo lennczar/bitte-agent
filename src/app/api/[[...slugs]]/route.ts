@@ -7,6 +7,8 @@ const app = new Elysia({ prefix: "/api", aot: false })
     const mbMetadata = JSON.parse(headers["mb-metadata"] || "{}");
     const accountId = mbMetadata?.accountData?.accountId || null;
 
+    console.log("HEY")
+
     const request = await fetch("https://api.growthmate.xyz/public/v0/rec/feed", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
