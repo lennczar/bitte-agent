@@ -15,7 +15,7 @@ const app = new Elysia({ prefix: "/api", aot: false })
       body: JSON.stringify({
         account_id: accountId,
         unit_id: "VCRmsOnwUcrj4gB0pby2qQ==",
-        referrer: window.location.href
+        referrer: "https://wallet.bitte.ai"
       })
     })
 
