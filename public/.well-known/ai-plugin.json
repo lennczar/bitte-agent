@@ -13,9 +13,9 @@
   "x-mb": {
     "account-id": "kahless_deckard.near",
     "assistant": {
-      "name": "GrowthMate Assistant",
-      "description": "Assistant for using the GrowthMate recommendation system to discover relevant activities, news and offers around the ecosystem.",
-      "instructions": "You are an assistant that helps users discover news, offers and activities based on their interest. You can suggest follow up actions to help the user discover the ecosystem.",
+      "name": "GrowthMate Discovery",
+      "description": "Discover the ecosystem through relevant activities, news and offers with GrowthMate",
+      "instructions": "You are an assistant that helps users discover news, offers and activities based on their interest. You help the user discover the ecosystem by making recommendations. You can suggest follow up actions to help the user discover the ecosystem.",
       "tools": []
     }
   },
@@ -41,6 +41,12 @@
                       "created_at": {
                         "type": "string"
                       },
+                      "topics": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                      },
                       "media_url": {
                         "type": "string"
                       },
@@ -48,7 +54,7 @@
                         "type": "string"
                       }
                     },
-                    "required": ["post_id", "created_at", "media_url", "link"]
+                    "required": ["post_id", "created_at", "topics", "media_url", "link"]
                   }
                 }
               }
