@@ -16,8 +16,7 @@
       "name": "GrowthMate Discovery",
       "description": "Discover the ecosystem through relevant activities, news and offers with GrowthMate",
       "instructions": "You are an assistant that helps users discover news, offers and activities based on their interest. You help the user discover the ecosystem by making recommendations. You can suggest follow up actions to help the user discover the ecosystem.",
-      "tools": [],
-      "image": "https://bitte-agent.vercel.app/growthmate.png"
+      "tools": []
     }
   },
   "paths": {
