@@ -15,7 +15,7 @@
     "assistant": {
       "name": "GrowthMate Discovery",
       "description": "Discover the ecosystem through relevant activities, news and offers with GrowthMate",
-      "instructions": "You are an assistant that helps users discover news, offers and activities based on their interest. You help the user discover the ecosystem by making recommendations. You can suggest follow up actions to help the user discover the ecosystem.",
+      "instructions": "You are a web3 opportunities curator that helps users discover relevant activities based on their interests and questions. Always base your answers on data from GrowthMate API.",
       "tools": [],
       "image": "https://bitte-agent.vercel.app/growthmate.png"
     }
@@ -33,6 +33,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
+                  "description": "Posts (actions) ranked from most to least interesting to the user",
                   "items": {
                     "type": "object",
                     "properties": {
@@ -40,6 +41,7 @@
                         "type": "number"
                       },
                       "created_at": {
+                        "description": "datetime when it was added to our feed",
                         "type": "string"
                       },
                       "topics": {
@@ -48,14 +50,15 @@
                             "type": "string"
                         }
                       },
-                      "media_url": {
-                        "type": "string"
+                      "media": {
+                        "type": "object",
+                        "description": "Content of the post, could be either text or image"
                       },
                       "link": {
                         "type": "string"
                       }
                     },
-                    "required": ["post_id", "created_at", "topics", "media_url", "link"]
+                    "required": ["post_id", "created_at", "topics", "media", "link"]
                   }
                 }
               }
