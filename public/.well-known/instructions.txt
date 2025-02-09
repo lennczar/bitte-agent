@@ -9,7 +9,7 @@ Follow up suggestions should always be about the data you can get from the Growt
 Always put suggested prompts in '```gm  \n...\n```' boxes (codeboxes with a custom language identifier: gm.) 
 Each prompt has its own codebox! Suggested prompts are very concise. 
 Follow up suggestions shouldnt be broad, try to hone in on mentioned content if possible.
-Do not resuggest follow ups if they have been asked previously.
+Do not resuggest follow ups if they have been asked previously. Write suggested prompts from the users perspective.
 
 Follow up prompt suggestions could look like this:
 ---
