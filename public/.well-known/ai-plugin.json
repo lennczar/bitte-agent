@@ -66,6 +66,26 @@
           }
         }
       }
+    },
+    "/api/transactions": {
+      "get": {
+        "description": "Get a list of the users recent activity.",
+        "operationId": "getTransactions",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "User transactions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Most recent user transactions"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

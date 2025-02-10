@@ -43,26 +43,36 @@ const app = new Elysia({ prefix: "/api", aot: false })
 
     return response;
   })
-  // .get("/transactions", async ({ params, headers }) => {
-  //   const mbMetadata = JSON.parse(headers["mb-metadata"] || "{}");
-  //   const accountId = mbMetadata?.accountData?.accountId || null;
+  .get("/transactions", async ({ params, headers }) => {
+    const mbMetadata = JSON.parse(headers["mb-metadata"] || "{}");
+    const accountId = mbMetadata?.accountData?.accountId || null;
+    const evmAddress = mbMetadata?.accountData?.evmAddress || null;
 
-  //   const request = await fetch("https://api.growthmate.xyz/public/v0/rec/feed", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       account_id: accountId,
-  //       unit_id: "VCRmsOnwUcrj4gB0pby2qQ==",
-  //       referrer: "https://wallet.bitte.ai"
-  //     })
-  //   })
+    const account_id = 
+      !!accountId && accountId !== "" ? accountId :
+      !!evmAddress && evmAddress !== "" ? evmAddress :
+      null // guest 
 
-  //   const response = await request.json();
+    const network = 
+      !!accountId && accountId !== "" ? "Near" :
+      !!evmAddress && evmAddress !== "" ? "Ethereum" :
+      null // guest
 
-  //   console.log(response);
+    if (network !== "Ethereum")
+      return {
+        error: "non EVM chains are not yet supported."
+      }
 
-  //   return response;
-  // })
+    const request = await fetch(`https://api.growthmate.xyz/public/v0/data/transactions/${network}/${account_id}`, {
+      method: "GET"
+    })
+
+    const response = await request.json();
+
+    console.log(response);
+
+    return response;
+  })
   .compile();
 
 export const GET = app.handle;
