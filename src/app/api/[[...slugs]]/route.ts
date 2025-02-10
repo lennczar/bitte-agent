@@ -10,18 +10,11 @@ const app = new Elysia({ prefix: "/api", aot: false })
 
     // mbMetadata
     // {
-    //   "evmAddress": "",
+    //   "evmAddress": "", // Optional
     //   "accountId": "",
-    //   "network": "mainnet",
+    //   "network": "mainnet", // EVM only??
     //   "agentId": "bitte-agent.vercel.app"
     // }
-
-    // mimic console.log
-    fetch("https://putsreq.com/0yHxhwvIAAbirTg6FkQd", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(mbMetadata),
-    })
 
     const account_id = 
       !!accountId && accountId !== "" ? accountId :
