@@ -7,12 +7,13 @@ const app = new Elysia({ prefix: "/api", aot: false })
     const mbMetadata = JSON.parse(headers["mb-metadata"] || "{}");
     const accountId = mbMetadata?.accountData?.accountId || null;
 
-    // mimic console.log
-    fetch("https://putsreq.com/0yHxhwvIAAbirTg6FkQd", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(mbMetadata),
-    })
+    // mbMetadata
+    // {
+    //   "evmAddress": "",
+    //   "accountId": "",
+    //   "network": "mainnet",
+    //   "agentId": "bitte-agent.vercel.app"
+    // }
 
     const request = await fetch("https://api.growthmate.xyz/public/v0/rec/feed", {
       method: "POST",
