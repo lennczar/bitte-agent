@@ -19,13 +19,19 @@ const app = new Elysia({ prefix: "/api", aot: false })
     const account_id = 
       !!accountId && accountId !== "" ? accountId :
       !!evmAddress && evmAddress !== "" ? evmAddress :
-      "" // guest 
+      null // guest 
+
+    const network = 
+      !!accountId && accountId !== "" ? "Near" :
+      !!evmAddress && evmAddress !== "" ? "Ethereum" :
+      null // guest
 
     const request = await fetch("https://api.growthmate.xyz/public/v0/rec/feed", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         account_id,
+        network,
         unit_id: "VCRmsOnwUcrj4gB0pby2qQ==",
         referrer: "https://wallet.bitte.ai"
       })
