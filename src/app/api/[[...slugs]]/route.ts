@@ -8,11 +8,11 @@ const app = new Elysia({ prefix: "/api", aot: false })
     const accountId = mbMetadata?.accountData?.accountId || null;
 
     // mimic console.log
-    await fetch("https://webhook.site/d8af5d7e-7fb2-4af5-aece-1d0087f2c021", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(mbMetadata),
-    })
+    // fetch("https://webhook.site/d8af5d7e-7fb2-4af5-aece-1d0087f2c021", {
+    //   method: "GET",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(mbMetadata),
+    // })
 
     const request = await fetch("https://api.growthmate.xyz/public/v0/rec/feed", {
       method: "POST",
