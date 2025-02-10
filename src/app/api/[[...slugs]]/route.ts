@@ -9,7 +9,7 @@ const app = new Elysia({ prefix: "/api", aot: false })
 
     // mimic console.log
     fetch("https://putsreq.com/0yHxhwvIAAbirTg6FkQd", {
-      method: "GET",
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(mbMetadata),
     })
