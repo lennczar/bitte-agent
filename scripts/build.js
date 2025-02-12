@@ -9,11 +9,11 @@ const instructions = fs.readFileSync(
 
 // Process the instructions:
 // 1. Replace newlines with double space + \n
-const processedInstructions = instructions.replace(/\n/g, '  \\n');
+const processedInstructions = instructions.replace(/\n/g, '  \n');
 
 // Read the ai-plugin.json file
 const pluginJson = fs.readFileSync(
-  path.join(__dirname, '../public/.well-known/ai-plugin.json'),
+  path.join(__dirname, '../public/.well-known/ai-plugin.template.json'),
   'utf8'
 );
 
