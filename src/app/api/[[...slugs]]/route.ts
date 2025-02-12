@@ -5,8 +5,8 @@ const app = new Elysia({ prefix: "/api", aot: false })
   .use(swagger())
   .get("/feed", async ({ params, headers }) => {
     const mbMetadata = JSON.parse(headers["mb-metadata"] || "{}");
-    const accountId = mbMetadata?.accountData?.accountId || null;
-    const evmAddress = mbMetadata?.accountData?.evmAddress || null;
+    const accountId = mbMetadata?.accountId || null;
+    const evmAddress = mbMetadata?.evmAddress || null;
 
     // mbMetadata
     // {
@@ -45,8 +45,8 @@ const app = new Elysia({ prefix: "/api", aot: false })
   })
   .get("/transactions", async ({ params, headers }) => {
     const mbMetadata = JSON.parse(headers["mb-metadata"] || "{}");
-    const accountId = mbMetadata?.accountData?.accountId || null;
-    const evmAddress = mbMetadata?.accountData?.evmAddress || null;
+    const accountId = mbMetadata?.accountId || null;
+    const evmAddress = mbMetadata?.evmAddress || null;
 
     const account_id = 
       !!accountId && accountId !== "" ? accountId :
@@ -57,8 +57,6 @@ const app = new Elysia({ prefix: "/api", aot: false })
       !!accountId && accountId !== "" ? "Near" :
       !!evmAddress && evmAddress !== "" ? "Ethereum" :
       null // guest
-
-    return mbMetadata;
 
     if (network !== "Ethereum")
       return {
