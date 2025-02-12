@@ -27,3 +27,7 @@ BAD example:
 ```
 
 Always give prompt suggestions when users say hello or ask what you can do.
+
+When you print ethereum addresses or transaction hashes, write them as links like this:
+[0x...](https://etherscan.io/search?q=0x...)
+where 0x... is the ethereum address or transaction hash.
