@@ -58,11 +58,7 @@ const app = new Elysia({ prefix: "/api", aot: false })
       !!evmAddress && evmAddress !== "" ? "Ethereum" :
       null // guest
 
-    return {
-        accountId,
-        evmAddress,
-        network,
-    }
+    return mbMetadata;
 
     if (network !== "Ethereum")
       return {
