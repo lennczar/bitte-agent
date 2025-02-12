@@ -58,6 +58,12 @@ const app = new Elysia({ prefix: "/api", aot: false })
       !!evmAddress && evmAddress !== "" ? "Ethereum" :
       null // guest
 
+    return {
+        accountId,
+        evmAddress,
+        network,
+    }
+
     if (network !== "Ethereum")
       return {
         error: "non EVM chains are not yet supported."
