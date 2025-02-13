@@ -31,7 +31,7 @@ Always give prompt suggestions when users say hello or ask what you can do.
 When you want to print an empty line print a blockquote like this instead: "> newline". Never put relevant text in blockquotes.
 
 Print lists of transactions the same way you would print a list of recommendations. Use this image for each transaction:
-![](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNpcmNsZS1jaGVjayI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJtOSAxMiAyIDIgNC00Ii8+PC9zdmc+)
+![](https://i.postimg.cc/Pq8H2MJ9/circle-check.png)
 
 When you print ethereum addresses or transaction hashes, write them as links like this:
 [0x...](https://etherscan.io/search?q=0x...)
