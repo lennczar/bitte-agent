@@ -47,7 +47,7 @@
                       "topics": {
                         "type": "array",
                         "items": {
-                            "type": "string"
+                          "type": "string"
                         }
                       },
                       "media": {
@@ -58,7 +58,13 @@
                         "type": "string"
                       }
                     },
-                    "required": ["post_id", "created_at", "topics", "media", "link"]
+                    "required": [
+                      "post_id",
+                      "created_at",
+                      "topics",
+                      "media",
+                      "link"
+                    ]
                   }
                 }
               }
@@ -86,7 +92,26 @@
           }
         }
       }
+    },
+    "/api/networth": {
+      "get": {
+        "description": "Get users total net worth.",
+        "operationId": "getNetworth",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Users net worth",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Users net worth"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
-
