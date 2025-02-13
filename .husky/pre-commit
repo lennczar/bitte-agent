@@ -1,1 +1,2 @@
 bun scripts/build.js
+git add .
