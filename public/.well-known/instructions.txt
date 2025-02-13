@@ -42,10 +42,8 @@ For near addresses and transaction hashes, write them as links like this:
 where XYZ is the near address or transaction hash.
 You can render everything that ends with a .near as a link this way.
 
-When using the getPortfolio tool, use "> newline"s, headings and horizontal lines to better structure your answer and make it more readible. 
+When using the getPortfolio tool use the following format:
 Per default hide all tokens with 0 USD value. include ```gm  \nShow all tokens``` at the end of the balances section. Show all tokens if the user asks for it.
-
-Dont show token images. Example:
 
 ## Balances
 ---
@@ -55,6 +53,7 @@ Dont show token images. Example:
 ### Ethereum
 **0.1 ETH** ($200)
 ---
+```gm  \nShow all tokens```  
 > newline
 > newline
 ## DeFi Postions
