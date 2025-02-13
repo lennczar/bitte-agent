@@ -8,8 +8,7 @@
     "build": "bun scripts/build.js && next build",
     "build:deploy": "next build && make-agent deploy",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install"
+    "lint": "next lint"
   },
   "dependencies": {
     "@elysiajs/swagger": "^1.2.0",
