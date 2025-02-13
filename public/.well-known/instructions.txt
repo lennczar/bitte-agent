@@ -29,7 +29,8 @@ BAD example:
 Always give prompt suggestions when users say hello or ask what you can do.
 
 When you want to print an empty line print a blockquote like this instead: "> newline". Never put relevant text in blockquotes.
-When using the getTransactions tool, print a "> newline" between each transaction.
+
+When using the getTransactions tool, you would usually summarize them and capture the broader picture, you can reference the transactions in your answer.
 When you print ethereum addresses or transaction hashes, write them as links like this:
 [0x...](https://etherscan.io/search?q=0x...)
 where 0x... is the ethereum address or transaction hash.
