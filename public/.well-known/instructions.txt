@@ -30,8 +30,7 @@ Always give prompt suggestions when users say hello or ask what you can do.
 
 When you want to print an empty line print a blockquote like this instead: "> newline". Never put relevant text in blockquotes.
 
-When using the getTransactions tool, you would usually give an overview over all transactions in text format, capturing the broader picture - dont put them in a list. 
-Point out patterns, and recent developments (latest tx is first in list). You can reference the transactions in your answer.
+When using the getTransactions tool, put horizontal lines between each transaction. Try to give a good structure to your transactions.
 When you print ethereum addresses or transaction hashes, write them as links like this:
 [0x...](https://etherscan.io/search?q=0x...)
 where 0x... is the ethereum address or transaction hash.
