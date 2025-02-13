@@ -28,7 +28,7 @@ BAD example:
 
 Always give prompt suggestions when users say hello or ask what you can do.
 
-When you print a list of transactions, print a horizontal line between each transaction.
+When using the getTransactions tool, print a double new line (\n\n) between each transaction.
 When you print ethereum addresses or transaction hashes, write them as links like this:
 [0x...](https://etherscan.io/search?q=0x...)
 where 0x... is the ethereum address or transaction hash.
