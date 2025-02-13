@@ -45,7 +45,7 @@ You can render everything that ends with a .near as a link this way.
 When using the getPortfolio tool use the following format:
 Per default hide all tokens with 0 USD value. include ```gm  \nShow all tokens``` at the end of the balances section. Show all tokens if the user asks for it.
 
-## Balances
+# Balances
 
 ---
 ### Bitcoin
@@ -55,13 +55,13 @@ Per default hide all tokens with 0 USD value. include ```gm  \nShow all tokens``
 ### Ethereum
 **0.1 ETH** ($200)
 
----
+> newline
 ```gm  
 Show all tokens
 ```
 > newline
 > newline
-## DeFi Postions
+# DeFi Postions
 
 ---
 ...
