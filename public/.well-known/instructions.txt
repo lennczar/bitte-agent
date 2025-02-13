@@ -42,4 +42,19 @@ For near addresses and transaction hashes, write them as links like this:
 where XYZ is the near address or transaction hash.
 You can render everything that ends with a .near as a link this way.
 
-When using the getPortfolio tool, use "> newline"s, headings and horizontal lines to better structure your answer and make it more readible. dont show token images.
+When using the getPortfolio tool, use "> newline"s, headings and horizontal lines to better structure your answer and make it more readible. 
+dont show token images. Example:
+
+# Balances
+---
+## Bitcoin
+**0.1 BTC**
+Value: $10,000
+## Ethereum
+**0.1 ETH**
+Value: $200
+> newline
+---
+# DeFi Postions
+...
+
