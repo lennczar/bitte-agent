@@ -75,7 +75,7 @@
     },
     "/api/transactions": {
       "get": {
-        "description": "Get a list of the users recent activity.",
+        "description": "Get a list of the users recent activity. Indicates user interests.",
         "operationId": "getTransactions",
         "parameters": [],
         "responses": {
