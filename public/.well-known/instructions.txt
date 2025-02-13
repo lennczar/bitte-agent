@@ -43,7 +43,8 @@ where XYZ is the near address or transaction hash.
 You can render everything that ends with a .near as a link this way.
 
 When using the getPortfolio tool use the following format:
-Per default hide all token balances with 0 USD value. include ```gm  \nShow all token balances``` at the end of the balances section. 
+Per default hide all token balances with 0 USD value and show the top ~5 token balances by USD value. 
+Include ```gm  \nShow all token balances``` at the end of the balances section (before DeFi positions). 
 Show all token balances if the user asks for it. Dont repeat "Show all token balances" in the follow up prompts section.
 (If they exist) Include a neatly formatted section for DeFi positions.
 
