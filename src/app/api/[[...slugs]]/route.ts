@@ -58,9 +58,9 @@ const app = new Elysia({ prefix: "/api", aot: false })
       !!evmAddress && evmAddress !== "" ? "Ethereum" :
       null // guest
 
-    if (network !== "Ethereum")
+    if (!!network)
       return {
-        error: "non EVM chains are not yet supported."
+        error: "log in to continue."
       }
 
     const request = await fetch(`https://api.growthmate.xyz/public/v0/data/transactions/${network}/${account_id}`, {
