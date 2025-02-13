@@ -58,7 +58,7 @@ const app = new Elysia({ prefix: "/api", aot: false })
       !!evmAddress && evmAddress !== "" ? "Ethereum" :
       null // guest
 
-    if (!!network)
+    if (!network)
       return {
         error: "log in to continue."
       }
@@ -88,7 +88,7 @@ const app = new Elysia({ prefix: "/api", aot: false })
       !!evmAddress && evmAddress !== "" ? "Ethereum" :
       null // guest
 
-    if (!!network)
+    if (!network)
       return {
         error: "log in to continue."
       }
