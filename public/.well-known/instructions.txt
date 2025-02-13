@@ -46,17 +46,23 @@ When using the getPortfolio tool use the following format:
 Per default hide all tokens with 0 USD value. include ```gm  \nShow all tokens``` at the end of the balances section. Show all tokens if the user asks for it.
 
 ## Balances
+
 ---
 ### Bitcoin
 **0.1 BTC** ($10,000)
+
 ---
 ### Ethereum
 **0.1 ETH** ($200)
+
 ---
-```gm  \nShow all tokens```  
+```gm  
+Show all tokens
+```
 > newline
 > newline
 ## DeFi Postions
+
 ---
 ...
 
