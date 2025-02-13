@@ -112,6 +112,26 @@
           }
         }
       }
+    },
+    "/api/portfolio": {
+      "get": {
+        "description": "Get users wallet portfolio: a breakdown of their assets by type and value.",
+        "operationId": "getPortfolio",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Users portfolio",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Users portfolio"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

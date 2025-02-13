@@ -40,4 +40,5 @@ For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
 [XYZ](https://nearblocks.io/address/XYZ) for addresses
 where XYZ is the near address or transaction hash.
+You can render everything that ends with a .near as a link this way.
 

@@ -103,6 +103,36 @@ const app = new Elysia({ prefix: "/api", aot: false })
 
     return response;
   })
+  .get("/portfolio", async ({ params, headers }) => {
+    const mbMetadata = JSON.parse(headers["mb-metadata"] || "{}");
+    const accountId = mbMetadata?.accountId || null;
+    const evmAddress = mbMetadata?.evmAddress || null;
+
+    const account_id = 
+      !!accountId && accountId !== "" ? accountId :
+      !!evmAddress && evmAddress !== "" ? evmAddress :
+      null // guest 
+
+    const network = 
+      !!accountId && accountId !== "" ? "Near" :
+      !!evmAddress && evmAddress !== "" ? "Ethereum" :
+      null // guest
+
+    if (!network)
+      return {
+        error: "log in to continue."
+      }
+
+    const request = await fetch(`https://api.growthmate.xyz/public/v0/data/portfolio/${network}/${account_id}`, {
+      method: "GET"
+    })
+
+    const response = await request.json();
+
+    console.log(response);
+
+    return response;
+  })
   .compile();
 
 export const GET = app.handle;
