@@ -6,9 +6,10 @@
     "dev": "concurrently \"next dev\" \"make-agent dev\"",
     "next:dev": "next dev",
     "build": "bun scripts/build.js && next build",
-    "build:deploy": "bun scripts/build.js && next build && make-agent deploy",
+    "build:deploy": "next build && make-agent deploy",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@elysiajs/swagger": "^1.2.0",
@@ -28,6 +29,7 @@
     "concurrently": "^9.1.2",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.3",
+    "husky": "^9.1.7",
     "make-agent": "^0.2.6",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
