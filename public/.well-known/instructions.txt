@@ -51,24 +51,19 @@ When you want to print an empty line print a blockquote like this instead: "> ne
 If instructed to show transaction history information, put horizontal lines between each transaction. 
 Try to give a good structure to your transactions.
 
-When displaying EVM addresses or transaction hashes:
+Format evm addresses and transactions as clickable links:
 
-1. For transaction hashes (66 characters):
-   - Display as: [0x123...abc](https://blockscan.com/tx/0x123abc123abc...)
-   - Show first 5 and last 3 characters in the link text
-   - Include the FULL hash in the URL
+1. Transaction hashes:
+   - Display: [0x1234...def](https://blockscan.com/tx/0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef)
+   - Text: First 5 chars + "..." + last 3 chars
+   - URL: Use COMPLETE hash (no abbreviations)
 
-2. For addresses (42 characters):
-   - Display as: [0x123...abc](https://blockscan.com/address/0x123abc123abc...)
-   - Show first 5 and last 3 characters in the link text OR show the name of the corresponding project
-   - Include the FULL address in the URL
+2. Addresses:
+   - Display: [0x1234...678](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678) OR [ProjectName](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678)
+   - Text: First 5 chars + "..." + last 3 chars OR project name
+   - URL: Use COMPLETE address (no abbreviations)
 
-Example:
-- Full tx hash: 0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
-- Display as: [0x1234...def](https://blockscan.com/tx/0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef)
-
-- Full address: 0x1234567890abcdef1234567890abcdef12345678
-- Display as: [0x1234...678](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678)
+IMPORTANT: NEVER use "..." in any URL - always use the complete hash/address.
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
