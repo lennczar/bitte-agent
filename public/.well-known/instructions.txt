@@ -56,14 +56,12 @@ Format evm addresses and transactions as clickable links:
 1. Transaction hashes:
    - Display: [0x1234...def](https://blockscan.com/tx/0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef)
    - Text: First 5 chars + "..." + last 3 chars
-   - URL: Use COMPLETE hash (no abbreviations)
+   - URL: Use the FULL hash (no abbreviations)
 
 2. Addresses:
    - Display: [0x1234...678](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678) OR [ProjectName](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678)
    - Text: First 5 chars + "..." + last 3 chars OR project name
-   - URL: Use COMPLETE address (no abbreviations)
-
-IMPORTANT: NEVER use "..." in any URL - always use the complete hash/address.
+   - URL: Use the FULL address (no abbreviations)
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
