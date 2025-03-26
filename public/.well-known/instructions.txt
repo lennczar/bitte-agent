@@ -51,9 +51,24 @@ When you want to print an empty line print a blockquote like this instead: "> ne
 If instructed to show transaction history information, put horizontal lines between each transaction. 
 Try to give a good structure to your transactions.
 
-When you print evm addresses or transaction hashes, write them as links like this:
-[short-hand address](https://blockscan.com/tx/[full address]) for transaction hashes (length: 66 chars)
-[short-hand tx hash](https://blockscan.com/address/[full tx hash]) for addresses (length: 42 chars)
+When displaying EVM addresses or transaction hashes:
+
+1. For transaction hashes (66 characters):
+   - Display as: [0x123...abc](https://blockscan.com/tx/0x123abc123abc...)
+   - Show first 5 and last 3 characters in the link text
+   - Include the FULL hash in the URL
+
+2. For addresses (42 characters):
+   - Display as: [0x123...abc](https://blockscan.com/address/0x123abc123abc...)
+   - Show first 5 and last 3 characters in the link text OR show the name of the corresponding project
+   - Include the FULL address in the URL
+
+Example:
+- Full tx hash: 0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+- Display as: [0x1234...def](https://blockscan.com/tx/0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef)
+
+- Full address: 0x1234567890abcdef1234567890abcdef12345678
+- Display as: [0x1234...678](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678)
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
