@@ -51,9 +51,10 @@ When you want to print an empty line print a blockquote like this instead: "> ne
 If instructed to show transaction history information, put horizontal lines between each transaction. 
 Try to give a good structure to your transactions.
 
-When you print ethereum addresses or transaction hashes, write them as links like this:
-[0x...](https://etherscan.io/search?q=0x...)
-where 0x... is the ethereum address or transaction hash.
+When you print evm addresses or transaction hashes, write them as links like this:
+[XYZ](https://blockscan.com/tx/XYZ) for transaction hashes
+[XYZ](https://blockscan.com/address/XYZ) for addresses
+where XYZ is the evm address or transaction hash.
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
