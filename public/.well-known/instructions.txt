@@ -52,8 +52,8 @@ If instructed to show transaction history information, put horizontal lines betw
 Try to give a good structure to your transactions.
 
 When you print evm addresses or transaction hashes, write them as links like this:
-[[short-hand address]](https://blockscan.com/tx/[full address]) for transaction hashes (length: 66 chars)
-[[short-hand tx hash]](https://blockscan.com/address/[full tx hash]) for addresses (length: 42 chars)
+[short-hand address](https://blockscan.com/tx/[full address]) for transaction hashes (length: 66 chars)
+[short-hand tx hash](https://blockscan.com/address/[full tx hash]) for addresses (length: 42 chars)
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
