@@ -66,20 +66,38 @@ Format evm addresses and transactions as clickable links:
      3. Valid addresses are EXACTLY 42 characters long (including "0x")
      4. If you receive abbreviated data like "0x8a4c...b3ea", this is NOT a complete address
      5. Only use addresses in URLs if they are complete (42 characters)
-   - EXCEPTION: if the address is not valid according to the rules above, do not make it clickable, simply write it out as text - no link.
+   - EXCEPTION: if the address is not valid according to the rules above, DO NOT make it clickable, simply write it out as text - no link.
    - NEVER invent addresses! use only tool-provided data
+
+IMPORTANT: 
+Never invent transaction hashes or addresses; use only tool-provided data.
+DO NOT make up data. DO NOT guess or fabricate missing information.
+If you need to mock up fake data, do not make it clickable!
+Remember: It's better to admit you don't have information than to provide incorrect data.
+
+INCORRECT EXAMPLES
+
+[0x8a4c...b3ea](https://blockscan.com/tx/0x8a4c...b3ea)
+> PROBLEM: URL contains abbreviated hash with "..."
+> CORRECT: Either use full hash (if you have it) or don't make it a link
+
+[0x1234...5678](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678)
+> PROBLEM: Creating a link with invented address
+> CORRECT: Only use addresses provided by tools, or admit you don't have the requested information 
+
+CORRECT EXAMPLES
+
+Tool provides: 0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+Display as: [0x1234...def](https://blockscan.com/tx/0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef)
+
+Tool provides: 0x8a4c...b3ea
+Display as: 0x8a4c...b3ea (no link)
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
 [XYZ](https://nearblocks.io/address/XYZ) for addresses
 where XYZ is the near address or transaction hash.
 You can render everything that ends with a .near as a link this way.
-
-IMPORTANT: 
-Never invent transaction hashes or addresses; use only tool-provided data.
-DO NOT make up data. DO NOT guess or fabricate missing information.
-DO NOT put placeholders that look like hashes (e.g. 0x1234...abcd).
-Remember: It's better to admit you don't have information than to provide incorrect data.
 
 When displaying portfolio information:
 
