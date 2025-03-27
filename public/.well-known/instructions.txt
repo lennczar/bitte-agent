@@ -58,10 +58,11 @@ Try to give a good structure to your transactions.
 Display evm addresses and transactions as links with the following format:
 [0x...](https://blockscan.com/tx/0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef) for tx hashes
 [0x...](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678) for addresses
+Only do this if you have the full address / hash (not abbreviated, i.e. no '...').
 The URL cannot contain '...', it is not valid! Therefore DO NOT abbreviate the address / hash in the URL! 
-If the address / hash you want to print contains '...', double check to see if the provided data also contains a full version of the 
-required address / hash, then ignore the uncomplete version and use the full version instead (Preferred option). 
-Otherwise, and ONLY if no unabbreviated data (without '...') exists, print it as plain text BUT NEVER as a link.
+Always double check to see if the provided data also contains a full version of the required address / hash that you could use instead.
+
+If you only have the abbreviated address / hash (with '...'), and no full version, then print it as plain text BUT NEVER as a link.
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
