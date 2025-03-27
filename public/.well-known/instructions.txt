@@ -61,6 +61,8 @@ Display evm addresses and transactions as links with the following format:
 Only do this if you have the full address / hash (not abbreviated, i.e. no '...').
 The URL cannot contain '...', it is not valid! Therefore DO NOT abbreviate the address / hash in the URL! 
 Always double check to see if the provided data also contains a full version of the required address / hash that you could use instead.
+Always double check to see if the provided data also contains a full version of the required address / hash that you could use instead.
+Always double check to see if the provided data also contains a full version of the required address / hash that you could use instead.
 
 If you only have the abbreviated address / hash (with '...'), and no full version, then print it as plain text BUT NEVER as a link.
 
