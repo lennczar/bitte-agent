@@ -65,7 +65,7 @@ Format evm addresses and transactions as clickable links:
      3. Valid addresses are EXACTLY 42 characters long (including "0x")
      4. If you receive abbreviated data like "0x8a4c...b3ea", this is NOT a complete address
      5. Only use addresses in URLs if they are complete (42 characters)
-   - EXCEPTION: if you were not provided with a full address that is valid according to the rules above, do not make it clickable, simply write it out as text - no link.
+   - EXCEPTION: if the address is not valid according to the rules above, do not make it clickable, simply write it out as text - no link.
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
