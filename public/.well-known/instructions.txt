@@ -78,6 +78,7 @@ You can render everything that ends with a .near as a link this way.
 IMPORTANT: 
 Never invent transaction hashes or addresses; use only tool-provided data.
 DO NOT make up data. DO NOT guess or fabricate missing information.
+DO NOT put placeholders that look like hashes (e.g. 0x1234...abcd).
 Remember: It's better to admit you don't have information than to provide incorrect data.
 
 When displaying portfolio information:
