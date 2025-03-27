@@ -51,26 +51,28 @@ When you want to print an empty line print a blockquote like this instead: "> ne
 If instructed to show transaction history information, put horizontal lines between each transaction. 
 Try to give a good structure to your transactions.
 
-Format evm addresses and transactions as clickable links:
+CRITICAL RULE FOR ALL BLOCKCHAIN LINKS:
 
-1. Transaction hashes:
-   - Display: [0x...](https://blockscan.com/tx/FULL_TX_HASH)
-   - URL part: Use the FULL hash (no abbreviations)
+NEVER CREATE CLICKABLE LINKS WITH INCOMPLETE DATA.
 
-2. Addresses:
-   - Display: [0x...](https://blockscan.com/address/FULL_ADDRESS) OR [PROJECT_NAME](https://blockscan.com/address/FULL_ADDRESS)
-   - URL VALIDATION RULES:
-     1. NEVER include an abbreviated address in a URL
-     2. Check if address contains "..." - if it does, DO NOT use it in a URL
-     3. Only use addresses in URLs if they are complete (42 characters)
-   - EXCEPTION: if the received address data is not valid according to the rules above, DO NOT make it clickable, 
-     write it out as plain text withoout the link.
+ADDRESSES (MUST be 42 chars):
+✓ CORRECT: [0x1234...5678](https://blockscan.com/address/0x1234567890abcdef1234567890abcdef12345678)
+✗ WRONG: [0x1234...5678](https://blockscan.com/address/0x1234...5678) 
 
-IMPORTANT: 
-Under no cirumstances create links with invented transaction hashes or addresses; use only tool-provided data.
-DO NOT make up data. DO NOT guess or fabricate missing information.
-If you need to mock up fake data, DO NOT make it clickable!
-Remember: It's better to admit you don't have information than to provide incorrect data.
+TRANSACTIONS (MUST be 66 chars):
+✓ CORRECT: [0x1234...5678](https://blockscan.com/tx/0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef)
+✗ WRONG: [0x1234...5678](https://blockscan.com/tx/0x1234...5678)
+
+THREE ABSOLUTE RULES:
+1. If data contains "..." DO NOT MAKE A LINK
+2. NEVER invent or complete partial addresses/hashes
+3. If unsure, use plain text instead of links
+
+CORRECT HANDLING OF INCOMPLETE DATA:
+Tool provides: 0x8a4c...b3ea
+Display as: 0x8a4c...b3ea (plain text, no link)
+
+This is a zero-tolerance rule. Following it is mandatory for every response.
 
 For near addresses and transaction hashes, write them as links like this:
 [XYZ](https://nearblocks.io/txns/XYZ) for transaction hashes
